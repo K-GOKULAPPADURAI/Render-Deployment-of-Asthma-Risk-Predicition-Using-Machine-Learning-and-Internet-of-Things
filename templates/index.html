@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Prediction</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+        h1 {
+            color: #00FF00;
+            text-align: center;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-size: 16px;
+        }
+        input {
+            font-size: 14px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/calculate">
+        {{ form.csrf_token }}
+        <h1>ASTHMA RISK PREDICTION</h1>
+        <div class="form-group">{{ form.username.label }} {{ form.username(size=20) }}</div>
+        <div class="form-group">{{ form.username1.label }} {{ form.username1(size=20) }}</div>
+        <div class="form-group">{{ form.username2.label }} {{ form.username2(size=20) }}</div>
+        <div class="form-group">{{ form.username3.label }} {{ form.username3(size=20) }}</div>
+        <div class="form-group">{{ form.username4.label }} {{ form.username4(size=20) }}</div>
+        <div class="form-group">{{ form.username5.label }} {{ form.username5(size=20) }}</div>
+        <button type="submit" class="submit-btn">Calculate</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Flask
+gunicorn
+itsdangerous
+Jinja2
+Werkzeug
+scipy
+scikit-learn
+joblib
+Flask-WTF
